@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="../css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../css/master.css" />
+        <link rel="stylesheet" href="../css/game.css" />
+        <title>Drinking Game</title>
+    </head>
+    <body>
+        <!-- Loading -->
+        <div id="loadingPage" class="position-absolute box">
+            <div class="d-flex justify-content-center av-center position-relative">
+                <div class="spinner-border text-light top-50" role="status" style="width: 3rem; height: 3rem">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div
+            class="modal fade"
+            id="end-game-modal"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Game Ended</h5>
+                    </div>
+                    <div class="modal-body">We have run out of questions! You can restart the game or return to the home page.</div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="reload_page()">Restart</button>
+                        <a type="button" class="btn btn-danger" href="../index.html">Return</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
+            <div class="offcanvas-header">
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="d-grid gap-2">
+                    <a href="../index.html" class="btn btn-lg btn-green" type="button">
+                        <img src="../img/icons/house-fill.svg" alt="home" height="20px" class="float-start av-center position-relative" />
+                        Home
+                    </a>
+                    <button class="btn btn-lg btn-green" type="button" onclick="reload_page()">
+                        <img src="../img/icons/reload.svg" alt="reload" height="20px" class="float-start av-center position-relative" />
+                        Restart Game
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar Button -->
+        <img
+            src="../img/icons/list.svg"
+            alt="burger"
+            id="sidebarButton"
+            class="float-end m-lg-2 img-fluid"
+            height="50px"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasLeft"
+            aria-controls="offcanvasLeft"
+        />
+
+        <!-- Game -->
+        <div class="position-absolute top-50 start-50 translate-middle mb-lg-5 mb-3" id="game">
+            <h1 class="text-center" id="question_count"></h1>
+            <p class="my-5 text-center" id="question"></p>
+            <ul class="text-center glass-list bg-light" id="shot_list"></ul>
+            <div class="d-grid gap-2 mt-3">
+                <button class="btn btn-lg btn-light btn-question" id="next-question" type="button">Next Question</button>
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/main.js"></script>
+        <script src="../js/game.js"></script>
+    </body>
+</html>
+
+<!-- 
+    Created by Chris Konstantopoulos
+    Social Pages:
+    GitHub: www.github.com/xriskon
+    Twitter: www.twitter.com/xriskon
+    Instagram: www.instagram.com/xriskon_
+       \\
+       (o>
+    \\_//)
+     \_/_)
+     _|_
+ -->

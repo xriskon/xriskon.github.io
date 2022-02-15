@@ -1,0 +1,135 @@
+body {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+        url("../img/game/bg.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#game {
+    margin: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    max-height: 90vh;
+    max-width: 90%;
+    background-color: #bdd863;
+    border-radius: 30px;
+}
+
+#sidebarButton {
+    height: 50px;
+}
+
+#loadingPage {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(27, 27, 27);
+    z-index: 1;
+}
+
+.btn-green {
+    background-color: #a4c639;
+}
+
+.btn-green:hover {
+    background-color: #bdd863;
+}
+
+.box {
+    display: block;
+    width: 200px;
+    height: 200px;
+    opacity: 1;
+}
+
+.box-hidden {
+    display: none;
+}
+
+/* ensure box is displayed block during the transition  */
+.box-transition.box-hidden {
+    display: block;
+    opacity: 0;
+}
+
+.box-transition {
+    transition: opacity 1s ease;
+}
+
+.inline-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.inline-list > li {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.mb-6 {
+    margin-bottom: 6rem;
+}
+
+.glass-list {
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.glass-list > li {
+    display: inline;
+}
+
+.btn-question {
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media screen and (min-width: 601px) {
+    #game {
+        width: 60%;
+    }
+
+    #question_count {
+        font-size: 50px;
+    }
+
+    #question {
+        font-size: 40px;
+    }
+
+    #shot_list > li > img {
+        height: 60px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #game {
+        width: 90%;
+    }
+
+    #sidebarButton {
+        height: 35px;
+        margin: 5px;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    #question_count {
+        font-size: 20px;
+    }
+
+    #question {
+        font-size: 15px;
+    }
+
+    #shot_list > li > img {
+        height: 40px;
+    }
+}
