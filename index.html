@@ -1,129 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-        <link rel="stylesheet" href="css/bootstrap.min.css" />
-        <link rel="stylesheet" href="css/master.css" />
-        <link rel="stylesheet" href="css/main.css" />
-        <title>Hot Shots</title>
-    </head>
-    <body>
-        <!-- Modal -->
-        <div
-            class="modal fade"
-            id="modal"
-            data-bs-backdrop="static"
-            data-bs-keyboard="false"
-            tabindex="-1"
-            aria-labelledby="staticBackdropLabel"
-            aria-hidden="true"
-        >
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">Advisory Warning</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>XRISKON</title>
+</head>
+
+<body>
+    <img src="img/bg-elements/lines.svg" alt="lines" class="lines">
+
+    <section class="about" id="about"></section>
+    <section class="projects" id="projects">
+        <div class="sidebar">
+            <h1 class="projects-title">PROJECTS</h1>
+        </div>
+
+        <div class="projects-container">
+            <button class="arrow-btn"><img src="img/icons/arrow-left.svg" alt="" class="arrow"></button>
+            <img src='https://dummyimage.com/1920x1080/b5b5b5/ffffff.png' alt='' />
+            <button class="arrow-btn"><img src="img/icons/arrow-right.svg" alt="" class="arrow"></button>
+        </div>
+    </section>
+    <section class="games" id="games">
+        <h1>GAMES</h1>
+
+        <div class="cards">
+            <div class="card">
+                <img src='https://dummyimage.com/1920x1300/b5b5b5/FFFFFF.png' alt='' class="card-bg" />
+                <div class="card-body">
+                    <h1 class="card-title">Hot Shots</h1>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget ante vel quam vulputate
+                        varius eu id ipsum. Ut quis euismod metus. Interdum et malesuada.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <div class="card-links">
+                        <img src="img/social/github.svg" alt="">
+                        <img src="img/social/twitter.svg" alt="">
                     </div>
-                    <div class="modal-body">Adult content is inculded. Continue only if you are over 18 years old.</div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">I am not over 18</button>
-                        <a type="button" class="btn btn-danger" href="html/game.html">I am over 18</a>
+                    <a href="html/hot-shots/index.html"><button class="card-btn">Learn More</button></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src='https://dummyimage.com/1920x1300/b5b5b5/FFFFFF.png' alt='' class="card-bg" />
+                <div class="card-body">
+                    <h1 class="card-title">TITLE</h1>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget ante vel quam vulputate
+                        varius eu id ipsum. Ut quis euismod metus. Interdum et malesuada.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <div class="card-links">
+                        <img src="img/social/github.svg" alt="">
+                        <img src="img/social/twitter.svg" alt="">
                     </div>
+                    <button class="card-btn">Learn More</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src='https://dummyimage.com/1920x1300/b5b5b5/FFFFFF.png' alt='' class="card-bg" />
+                <div class="card-body">
+                    <h1 class="card-title">TITLE</h1>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget ante vel quam vulputate
+                        varius eu id ipsum. Ut quis euismod metus. Interdum et malesuada.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <div class="card-links">
+                        <img src="img/social/github.svg" alt="">
+                        <img src="img/social/twitter.svg" alt="">
+                    </div>
+                    <button class="card-btn">Learn More</button>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- Home -->
-        <div id="home">
-            <!-- Navabar -->
-            <nav class="navbar navbar-expand-lg navbar-dark ms-sm-4">
-                <div class="container-fluid">
-                    <a class="navbar-brand fw-bold nav-brand" href="#home"> Hot Shots </a>
-                    <button
-                        class="navbar-toggler me-sm-4"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link nav-text" href="#home">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link nav-text" href="#about">About</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+    <!-- FOOTER -->
+    <footer>
+        <small>Copyright © 2022 Chris Konstantopoulos</small>
+        <br />
+        <small>All Rights Reserved</small>
+    </footer>
+</body>
 
-            <!-- Main -->
-            <div class="av-center margin-left landing">
-                <p class="fc-white fw-bold text">A drinking game</p>
-                <p class="fc-green fw-bold text">for the whole group</p>
-                <button type="button" class="btn fc-white fw-bold btn-lg btn-online me-4 my-2" data-bs-toggle="modal" data-bs-target="#modal">
-                    Play Online
-                </button>
-                <!-- <a class="btn fc-white fw-bold btn-lg btn-android my-2" type="button" href="https://play.google.com/store">Download on Android</a>             -->
-            </div>
-
-            <!-- Line -->
-            <div class="position-absolute bottom-0 start-50 translate-middle-x line"></div>
-        </div>
-
-        <!-- Divider -->
-        <!-- <div class="divider"></div> -->
-
-        <!-- About -->
-        <!-- <div id="about">
-        <div class="title text-center fc-white fw-bold fs-1">
-            <p class="av-center">ABOUT THE GAME</p>
-        </div>
-    </div> -->
-
-        <!-- Footer -->
-        <div class="container">
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-                <p class="col-md-4 mb-0 text-muted">© 2021 Company, Inc</p>
-                <a
-                    href="#home"
-                    class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none"
-                >
-                    <img src="img/social-media/logo-sm.svg" alt="logo" height="60" />
-                </a>
-
-                <ul class="nav col-md-4 justify-content-end">
-                    <li class="nav-item"><a href="#home" class="nav-link px-2 text-muted">Home</a></li>
-                    <li class="nav-item"><a href="#about" class="nav-link px-2 text-muted">About</a></li>
-                </ul>
-            </footer>
-        </div>
-
-        <!-- Scripts -->
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery-3.6.0.min.js"></script>
-        <script src="js/main.js"></script>
-    </body>
 </html>
-
-<!-- 
-    Created by Chris Konstantopoulos
-    Social Pages:
-    GitHub: www.github.com/xriskon
-    Twitter: www.twitter.com/xriskon
-    Instagram: www.instagram.com/xriskon_
-       \\
-       (o>
-    \\_//)
-     \_/_)
-     _|_
- -->
