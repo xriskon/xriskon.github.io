@@ -71,12 +71,10 @@ body {
 
 /* FOOTER */
 footer {
-    /* SIZING */
     width: 100%;
     padding-top: 1em;
     padding-bottom: 1em;
 
-    /* APPEARANCE */
     background-color: rgb(255, 255, 255);
     text-align: center;
     font-size: 1.05rem;
