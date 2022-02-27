@@ -231,6 +231,20 @@ section {
 }
 
 @media only screen and (max-width: 600px) {
+    .bracket {
+        font-size: 15rem;
+        font-weight: 500;
+        color: #f03f39;
+    }
+
+    .home-title {
+        line-height: 6rem;
+        font-size: 7rem;
+        font-weight: 900;
+        text-align: center;
+        color: #f03f39;
+    }
+
     .games-container {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -254,19 +268,90 @@ section {
     }
 }
 
-@media only screen and (min-width: 600px) {
+@media screen and (max-width: 580px) {
+    .bracket {
+        font-size: 20rem;
+        font-weight: 500;
+        color: #f03f39;
+    }
+
+    .home-title {
+        line-height: 8rem;
+        font-size: 9rem;
+        font-weight: 900;
+        text-align: center;
+        color: #f03f39;
+    }
+
+    #projects {
+        height: max-content;
+        padding: 10rem 0 10rem 0;
+    }
+
+    #games {
+        height: max-content;
+        padding: 10rem 0 10rem 0;
+    }
+
+    .container {
+        height: 100%;
+    }
+
+    .container > div {
+        height: 13rem;
+    }
+
     .games-container {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         gap: 3rem;
         grid-auto-flow: column;
         grid-template-areas:
-            ". game-01 ."
-            ". game-02 ."
-            ". game-03 .";
+            "game-01"
+            "game-02"
+            "game-03";
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .bracket {
+        font-size: 20rem;
+        font-weight: 500;
+        color: #f03f39;
+    }
+
+    .home-title {
+        line-height: 8rem;
+        font-size: 9rem;
+        font-weight: 900;
+        text-align: center;
+        color: #f03f39;
+    }
+
+    #projects {
+        height: max-content;
+        padding: 10rem 0 10rem 0;
+    }
+
+    #games {
+        padding: 10rem 0 10rem 0;
+        height: max-content;
+    }
+
+    .games-container {
+        height: 80%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 3rem;
+        grid-auto-flow: column;
+        grid-template-areas:
+            "game-01"
+            "game-02"
+            "game-03";
     }
 
     .container {
+        height: 80%;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         gap: 3rem;
@@ -289,6 +374,10 @@ section {
             "game-03 game-03";
     }
 
+    #games {
+        height: max-content;
+    }
+
     .container {
         height: 80%;
         grid-template-columns: 1fr;
@@ -304,8 +393,10 @@ section {
 
 @media only screen and (min-width: 992px) {
     #games {
+        height: 100vh;
         padding: 0rem 10rem 0rem 10rem;
     }
+
     .games-container {
         width: max-content;
         grid-template-columns: 1fr 1fr 1fr;
