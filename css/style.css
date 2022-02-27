@@ -293,7 +293,7 @@ section {
     }
 
     .container > div > .card-hor-img {
-        width: 20%;
+        display: none;
     }
 }
 
