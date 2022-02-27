@@ -171,14 +171,20 @@ section {
 
 .game-01 {
     grid-area: game-01;
+    justify-self: center;
+    align-self: center;
 }
 
-.game-01 {
+.game-02 {
     grid-area: game-02;
+    justify-self: center;
+    align-self: center;
 }
 
-.game-01 {
+.game-03 {
     grid-area: game-03;
+    justify-self: center;
+    align-self: center;
 }
 
 .custom-shape-divider-top-1645986461 {
@@ -222,4 +228,125 @@ section {
 
 .custom-shape-divider-bottom-1645986521 .shape-fill {
     fill: var(--grey);
+}
+
+@media only screen and (max-width: 600px) {
+    .games-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 3rem;
+        grid-auto-flow: column;
+        grid-template-areas:
+            ". game-01 ."
+            ". game-02 ."
+            ". game-03 .";
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 3rem;
+        grid-template-areas:
+            "card-01"
+            "card-03"
+            "card-02"
+            "card-04";
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .games-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 3rem;
+        grid-auto-flow: column;
+        grid-template-areas:
+            ". game-01 ."
+            ". game-02 ."
+            ". game-03 .";
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 3rem;
+        grid-template-areas:
+            "card-01"
+            "card-03"
+            "card-02"
+            "card-04";
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .games-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 2rem;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "game-01 game-02"
+            "game-03 game-03";
+    }
+
+    .container {
+        height: 80%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 2rem;
+        grid-template-areas:
+            "card-01"
+            "card-03"
+            "card-02"
+            "card-04";
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #games {
+        padding: 0rem 10rem 0rem 10rem;
+    }
+    .games-container {
+        width: max-content;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 2rem;
+        grid-auto-flow: row;
+        grid-template-areas: "game-01 game-02 game-03";
+    }
+
+    .container {
+        height: 80%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 2rem;
+        grid-template-areas:
+            "card-01"
+            "card-03"
+            "card-02"
+            "card-04";
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .games-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 2rem;
+        grid-auto-flow: row;
+        grid-template-areas: "game-01 game-02 game-03";
+    }
+
+    .container {
+        width: 80vw;
+        height: 50vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 2rem;
+        grid-auto-flow: column;
+        grid-template-areas:
+            "card-01 card-02"
+            "card-03 card-04";
+    }
 }
