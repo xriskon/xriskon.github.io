@@ -14,6 +14,12 @@ html {
     scroll-behavior: smooth;
 }
 
+a {
+    color: inherit;
+    fill: inherit;
+    text-decoration: none;
+}
+
 /* HOME */
 .home {
     width: 100%;
@@ -42,18 +48,25 @@ html {
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
+    color: #fcfcfc;
+    fill: #fcfcfc;
 
     position: fixed;
     top: 0;
     z-index: 1;
 
     font-weight: 500;
-    transition: background-color 200ms linear;
+    transition: background-color 300ms linear;
+}
+
+.nav-list,
+.nav-logo {
+    color: inherit;
+    fill: inherit;
 }
 
 .nav-list {
     list-style-type: none;
-    color: #393d3f;
 }
 
 .nav-item {
@@ -61,13 +74,21 @@ html {
     margin-left: 1.5rem;
 }
 
+.nav-item a {
+    transition: color 100ms linear;
+}
+
+.nav-item a:hover {
+    color: #f07167;
+}
+
 .nav-item:first-child {
     margin: 0;
 }
 
 .nav-active {
-    background-color: #fcfcfc;
-    transition: background-color 200ms linear;
+    background-color: #003844;
+    transition: background-color 300ms linear;
 }
 
 /* WEATHER */
@@ -82,6 +103,8 @@ html {
 .events {
     height: 100vh;
     width: 100%;
+
+    padding-top: 95px;
 
     display: flex;
     align-items: center;
@@ -245,7 +268,7 @@ html {
 .info {
     height: 100vh;
     width: 100%;
-
+    padding-top: 95px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -281,6 +304,16 @@ html {
     background-image: url(https://dummyimage.com/1920x1080.png?text=Image%202);
     background-size: cover;
     background-position: center;
+}
+
+/* CONTACT */
+.contact {
+    height: 100vh;
+    width: 100%;
+    padding-top: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer {
