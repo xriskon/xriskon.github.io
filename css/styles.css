@@ -8,55 +8,97 @@
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
     position: relative;
-    z-index: 2;
 }
 
 html {
     scroll-behavior: smooth;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+
+    perspective: 1px;
+    transform-style: preserve-3d;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+}
+
+/* NAVBAR */
+.navbar {
+    height: 95px;
+    width: 100%;
+    position: static;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    z-index: 1;
+}
+
+.nav-list {
+    list-style-type: none;
+}
+
+.nav-item {
+    display: inline;
+    margin-left: 2rem;
+}
+
+.nav-item:first-child {
+    margin: 0;
 }
 
 /* HOME */
 .home {
-    height: 130vh;
+    width: 100%;
+    height: 100vh;
     overflow: hidden;
     position: relative;
 
     background: rgb(175, 234, 232);
     background: linear-gradient(0deg, rgba(175, 234, 232, 1) 0%, rgba(56, 138, 241, 1) 100%);
+
+    transform-style: preserve-3d;
+}
+
+.home::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(../img/images/background.JPG);
+    background-size: cover;
+
+    transform: translateZ(-1px) scale(2.2);
+}
+
+.home::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    background-image: url(../img/images/middle.png);
+    background-size: cover;
 }
 
 .home > .hero {
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) translateZ(-0.5px) scale(1.5);
 
-    font-size: 10rem;
+    font-size: 12rem;
     font-weight: 900;
-    color: #fcfcfc;
-    z-index: -1;
-}
-
-.gradient {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 30%;
-    width: 100%;
-    background: rgb(255, 255, 255);
-    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-    z-index: 1;
-}
-
-.bg-parallax {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transform: translateY(40%);
-
-    width: 100%;
-    height: auto;
-    z-index: 0;
+    color: #393d3f;
 }
 
 /* EVENTS */
@@ -67,6 +109,8 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    transform-style: preserve-3d;
 }
 
 .events-container {
