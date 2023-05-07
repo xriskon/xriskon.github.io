@@ -355,6 +355,12 @@ a {
 
 .info-02 {
     grid-area: 2 / 1 / 3 / 2;
+    text-align: right;
+}
+
+.info-02 > h1 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
 }
 
 .info-image-02 {
