@@ -1,0 +1,46 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-blue: #2d3142;
+    --light-blue: #4f5d75;
+    --grey: #bfc0c0;
+    --orange: #ef8354;
+    --white: #ffffff;
+    --black: #252525;
+
+    --white-hover: #ebebeb;
+    --orange-hover: #d1724a;
+    --light-blue-hover: #404c61;
+    --dark-blue-hover: #222636;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.flex {
+    display: flex;
+}
+
+.btn-primary {
+    border: none;
+    padding: 0.5rem 1rem;
+    background-color: var(--orange);
+
+    transition: background-color 200ms ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--orange-hover);
+}
