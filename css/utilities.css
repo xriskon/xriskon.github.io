@@ -1,46 +1,50 @@
-*,
-*::after,
-*::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.list-inline {
+    list-style-type: none;
 }
 
-:root {
-    --dark-blue: #2d3142;
-    --light-blue: #4f5d75;
-    --grey: #bfc0c0;
-    --orange: #ef8354;
-    --white: #ffffff;
-    --black: #252525;
-
-    --white-hover: #ebebeb;
-    --orange-hover: #d1724a;
-    --light-blue-hover: #404c61;
-    --dark-blue-hover: #222636;
+.list-inline li {
+    display: inline;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.flex {
-    display: flex;
-}
-
-.btn-primary {
+.btn-blue,
+.btn-orange,
+.btn-white {
+    border-radius: 0.8rem;
+    font-size: 1rem;
     border: none;
-    padding: 0.5rem 1rem;
-    background-color: var(--orange);
-
+    padding: 1rem 1.8rem;
+    border: none;
+    cursor: pointer;
     transition: background-color 200ms ease;
 }
 
-.btn-primary:hover {
+.btn-orange {
+    color: var(--white);
+    background-color: var(--orange);
+}
+
+.btn-orange:hover {
     background-color: var(--orange-hover);
+}
+
+.btn-blue {
+    color: var(--white);
+    background-color: var(--dark-blue);
+}
+
+.btn-blue:hover {
+    background-color: var(--dark-blue-hover);
+}
+
+.btn-white {
+    color: var(--black);
+    background-color: var(--white);
+}
+
+.btn-white:hover {
+    background-color: var(--white-hover);
+}
+
+.btn-disabled {
+    cursor: not-allowed;
 }

@@ -1,45 +1,45 @@
-const navbar = document.getElementById("navbar");
-const navList = document.getElementById("nav-list");
-const navToggle = document.getElementById("mobile-nav-toggle");
-const navLinks = document.querySelectorAll(".nav-list li");
-const hero = document.getElementById("hero");
+const navbar = document.querySelector(".navbar");
+const navToggle = document.querySelector(".mobile-nav-toggle");
+const navList = document.querySelector(".nav-list");
 const html = document.querySelector("html");
 
-const hiddenElements = document.querySelectorAll(".hidden");
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        console.log(entry);
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        }
-    });
-});
-
-hiddenElements.forEach((el) => observer.observe(el));
+const hero = document.querySelector(".hero");
 
 window.onscroll = () => {
+    console.log(window.scrollY);
     if (window.scrollY > 100) {
-        navbar.classList.add("nav-active");
+        navbar.classList.add("nav-scrolled");
     } else {
-        navbar.classList.remove("nav-active");
+        navbar.classList.remove("nav-scrolled");
     }
     if (window.scrollY > 210) {
-        hero.classList.add("hero-off");
+        hero.classList.add("hidden");
     } else {
-        hero.classList.remove("hero-off");
+        hero.classList.remove("hidden");
     }
 };
+
+// const hiddenElements = document.querySelectorAll(".hidden");
+// const observer = new IntersectionObserver((entries) => {
+//     entries.forEach((entry) => {
+//         if (entry.isIntersecting) {
+//             entry.target.classList.add("show");
+//         }
+//     });
+// });
+
+// hiddenElements.forEach((el) => observer.observe(el));
 
 [navToggle, navList].forEach((item) => {
     item.addEventListener("click", () => {
         const visibility = navList.getAttribute("data-visible");
         if (visibility === "false") {
             navList.setAttribute("data-visible", true);
-            navToggle.setAttribute("aria-expanded", true);
+            navToggle.setAttribute("data-expanded", true);
             html.classList.add("html-locked");
         } else if (visibility === "true") {
             navList.setAttribute("data-visible", false);
-            navToggle.setAttribute("aria-expanded", false);
+            navToggle.setAttribute("data-expanded", false);
             html.classList.remove("html-locked");
         }
     });
