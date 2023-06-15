@@ -284,10 +284,13 @@ a {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    text-align: center;
 }
 
 .tickets-title {
     font-size: 3em;
+    text-align: center;
 }
 
 .tickets-description {
