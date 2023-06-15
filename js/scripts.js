@@ -1,9 +1,8 @@
 const navbar = document.querySelector(".navbar");
+const hero = document.querySelector(".hero");
 const navToggle = document.querySelector(".mobile-nav-toggle");
 const navList = document.querySelector(".nav-list");
 const html = document.querySelector("html");
-
-const hero = document.querySelector(".hero");
 
 window.onscroll = () => {
     if (window.scrollY > 100) {
@@ -11,24 +10,12 @@ window.onscroll = () => {
     } else {
         navbar.classList.remove("nav-scrolled");
     }
-    if (window.scrollY > 210) {
+    if (window.scrollY > 260) {
         hero.classList.add("hidden");
     } else {
         hero.classList.remove("hidden");
     }
 };
-
-const hiddenElements = document.querySelectorAll(".hidden");
-console.log(hiddenElements);
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        }
-    });
-});
-
-hiddenElements.forEach((el) => observer.observe(el));
 
 [navToggle, navList].forEach((item) => {
     item.addEventListener("click", () => {
