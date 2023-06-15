@@ -293,17 +293,22 @@
     }
 
     .mobile-nav-toggle {
-        height: 50%;
+        height: 40%;
     }
 
     .footer {
-        height: 100px;
+        height: max-content;
         flex-direction: column;
+        padding: 1em 0;
+        gap: 1em;
     }
 
     .footer-logo {
-        height: 60%;
+        height: 6em;
         position: relative;
+        top: auto;
+        left: auto;
+        transform: translate(0);
     }
 
     .footer-item img {

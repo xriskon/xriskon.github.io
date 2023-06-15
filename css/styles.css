@@ -445,11 +445,16 @@ a {
     display: flex;
 
     border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    text-align: justify;
 }
 
 .question-title {
     width: 90%;
     color: var(--orange);
+}
+
+.question-body {
+    padding-left: 2em;
 }
 
 .contact {
@@ -531,6 +536,18 @@ a {
     width: 60%;
 
     border-radius: var(--bRadius);
+}
+
+@media only screen and (max-width: 1366px) {
+    .info {
+        min-height: max-content;
+        grid-template-rows: 40% 40%;
+    }
+
+    .info-text > a,
+    .location-text > a {
+        position: relative;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -661,6 +678,8 @@ a {
         align-content: center;
 
         font-size: 0.8em;
+
+        min-height: fit-content;
     }
 
     .info-text > a,
@@ -822,6 +841,31 @@ a {
     }
 
     .question {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .hero {
+        font-size: 4em;
+    }
+
+    .info {
+        height: 225vh;
+        font-size: 0.9em;
+    }
+
+    .contact-text {
+        grid-template-columns: 50% 50%;
+    }
+
+    .contact-details {
+        text-align: right;
+    }
+
+    .contact > iframe {
+        aspect-ratio: 1;
+        height: auto;
         width: 80%;
     }
 }
