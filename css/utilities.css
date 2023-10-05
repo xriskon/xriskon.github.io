@@ -1,71 +1,26 @@
 :root {
-    --dark-blue: #2d3142;
-    --light-blue: #4f5d75;
-    --grey: #bfc0c0;
-    --orange: #ef8354;
-    --white: #ffffff;
-    --black: #161616;
-
-    --white-hover: #ebebeb;
-    --orange-hover: #d1724a;
-    --light-blue-hover: #404c61;
-    --dark-blue-hover: #222636;
+	--grey: #282828;
+	--green-light: #8aaa66;
+	--green-dark: #39432e;
 }
 
-.hidden {
-    z-index: -1;
-    filter: blur(5px);
-    user-select: none;
-    opacity: 0;
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.list-inline {
-    list-style-type: none;
+html {
+	scroll-behavior: smooth;
 }
 
-.list-inline li {
-    display: inline;
+body {
+	background-color: #121212;
 }
 
-.position-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.btn-blue,
-.btn-orange,
-.btn-white {
-    padding: 1rem 1.5rem;
-    color: var(--white);
-    border-radius: 0.8rem;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-
-.btn-orange {
-    background-color: var(--orange);
-}
-
-.btn-orange:hover {
-    background-color: var(--orange-hover);
-}
-
-.btn-blue {
-    background-color: var(--dark-blue);
-}
-
-.btn-blue:hover {
-    background-color: var(--dark-blue-hover);
-}
-
-.btn-white {
-    background-color: var(--white);
-    color: var(--black);
-}
-
-.btn-white:hover {
-    background-color: var(--white-hover);
+img {
+	width: 100%;
 }
