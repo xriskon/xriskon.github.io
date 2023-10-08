@@ -1,7 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 :root {
-	--grey: #282828;
-	--green-light: #8aaa66;
-	--green-dark: #39432e;
+	--black: #000000;
+	--grey: #c7c7c7;
+	--dark-grey: #131313;
+	--dark-green: #39432e;
+	--light-green: #8aaa66;
+	--light-grey: #efefef;
+	--white: #f6f6f6;
+
+	--light-green-hover: #6f8a51;
 }
 
 *,
@@ -10,17 +18,36 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-family: "Inter", sans-serif;
 }
 
 html {
 	scroll-behavior: smooth;
 }
 
+html,
 body {
-	background-color: #121212;
+	height: 100%;
+	width: 100%;
 }
 
 img {
+	height: 100%;
 	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+button {
+	border: none;
+	background: transparent;
+}
+
+section {
+	min-height: 100vh;
+	height: fit-content;
+	padding: 5em 10%;
 }

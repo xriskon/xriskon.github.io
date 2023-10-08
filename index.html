@@ -2,19 +2,190 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<meta http-equiv="content-language" content="el" />
+		<meta name="author" content="Christos Konstantopoulos" />
+		<meta name="copyright" content="Christos Konstantopoulos" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="theme-color" content="#4285f4" />
+		<meta name="description" content="Add desciption(150 characters max)" />
 		<link rel="stylesheet" href="css/utilities.css" />
-		<title>Λιόπρασο - Καλοκαιρινές Εκδηλώσεις</title>
+		<link rel="stylesheet" href="css/components.css" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<script src="js/scripts.js" defer></script>
+		<title>Λιόπρασο - Εκπολιτιστικός Σύλλογος Λιοπράσου</title>
 	</head>
 	<body>
-		<img src="Desktop-Preview.png" alt="dekstop" />
+		<!-- NAVBAR -->
+		<nav class="navbar" id="navbar">
+			<a href="#" class="mobile-nav-logo">
+				<img src="img/nav_logo.png" alt="logo" />
+			</a>
+			<div class="mobile-nav-toggle" data-expanded="false">
+				<svg viewBox="0 0 100 100" fill="#ffffff">
+					<rect class="line-top" width="75" height="10" y="20" rx="5"></rect>
+					<rect class="line-middle-01" width="100" height="10" y="45" rx="5"></rect>
+					<rect class="line-middle-02" width="100" height="10" y="45" rx="5"></rect>
+					<rect class="line-bottom" width="75" height="10" x="25" y="70" rx="5"></rect>
+				</svg>
+			</div>
+			<div class="mobile-sidebar">
+				<ul class="mobile-nav-list">
+					<li class="mobile-nav-item active">
+						<a href="#home">Home</a>
+					</li>
+					<li class="mobile-nav-item">
+						<a href="#info">Info</a>
+					</li>
+					<li class="mobile-nav-item">
+						<a href="#events">Events</a>
+					</li>
+					<li class="mobile-nav-item">
+						<a href="#contact">Contact</a>
+					</li>
+					<li class="mobile-nav-item dropdown-btn">Language</li>
+					<div class="dropdown-container">
+						<a href="#" class="dropdown-item">🇬🇷 Ελληνικά</a>
+						<a href="#" class="dropdown-item">🇬🇧 English</a>
+					</div>
+					<div class="mobile-bottom-buttons">
+						<a href="#" class="btn-white">
+							<svg viewBox="0 0 10 7.49">
+								<path
+									d="m9.06,7.49H.94c-.24,0-.49-.1-.66-.27-.18-.18-.27-.41-.27-.66v-1.56c0-.17.14-.31.31-.31.25,0,.49-.1.66-.27.17-.17.27-.42.27-.66s-.1-.49-.27-.66c-.17-.18-.42-.28-.66-.28-.17,0-.31-.14-.31-.31V.94c0-.25.1-.49.27-.66.18-.18.41-.27.66-.27h8.13c.25,0,.49.1.66.27.18.18.27.41.27.66v1.56c0,.17-.14.31-.31.31h0c-.25,0-.49.1-.66.28-.18.18-.27.41-.27.66s.1.49.27.66c.19.19.46.27.7.27.07,0,.14.03.2.08.07.06.09.14.09.23v1.56c0,.25-.1.49-.27.66-.18.18-.42.28-.66.28ZM.62,5.28v1.28c0,.08.03.16.09.22.06.06.14.09.22.09h8.13c.08,0,.16-.03.22-.09.06-.06.09-.14.09-.22v-1.28c-.31-.06-.58-.21-.8-.42-.29-.29-.46-.69-.46-1.1s.16-.81.46-1.1c.22-.22.5-.37.8-.43V.94c0-.08-.03-.16-.09-.22-.06-.06-.14-.09-.22-.09H.94c-.08,0-.16.03-.22.09-.06.06-.09.14-.09.22v1.28c.3.06.58.21.79.43.29.29.46.69.46,1.1s-.17.81-.46,1.1c-.22.22-.49.36-.79.43Zm9.06-2.78h0,0Zm-2.51,3.75c-.17,0-.31-.14-.31-.31v-.62c0-.17.14-.31.31-.31s.31.14.31.31v.62c0,.17-.14.31-.31.31Zm-4.37,0c-.17,0-.31-.14-.31-.31v-.62c0-.17.14-.31.31-.31s.31.14.31.31v.62c0,.17-.14.31-.31.31Zm4.37-1.87c-.17,0-.31-.14-.31-.31v-.62c0-.17.14-.31.31-.31s.31.14.31.31v.62c0,.17-.14.31-.31.31Zm-4.37,0c-.17,0-.31-.14-.31-.31v-.62c0-.17.14-.31.31-.31s.31.14.31.31v.62c0,.17-.14.31-.31.31Zm4.37-1.87c-.17,0-.31-.14-.31-.31v-.62c0-.17.14-.31.31-.31s.31.14.31.31v.62c0,.17-.14.31-.31.31Zm-4.37,0c-.17,0-.31-.14-.31-.31v-.62c0-.17.14-.31.31-.31s.31.14.31.31v.62c0,.17-.14.31-.31.31Z"
+								/>
+							</svg>
+						</a>
+						<a href="#" class="btn-white">TRANSPORT</a>
+					</div>
+				</ul>
+			</div>
+			<div class="mobile-backdrop"></div>
+
+			<div class="nav-left">
+				<a href="#" class="nav-logo">
+					<img src="img/logo.svg" alt="logo" />
+				</a>
+				<ul class="nav-list inline-list">
+					<li class="nav-item"><a href="#home">HOME</a></li>
+					<li class="nav-item"><a href="#info">INFO</a></li>
+					<li class="nav-item"><a href="#events">EVENTS</a></li>
+					<li class="nav-item"><a href="#contact">CONTACT</a></li>
+				</ul>
+			</div>
+			<div class="nav-right">
+				<div class="language-selector">
+					<a href="#" class="tooltip"
+						>🇬🇷
+						<span class="tooltiptext">Ελληνικά</span>
+					</a>
+					<a href="#" class="tooltip"
+						>🇬🇧
+						<span class="tooltiptext">English</span>
+					</a>
+				</div>
+				<a href="#" class="btn-white" id="tickets-btn">
+					<svg viewBox="0 0 10 7.49">
+						<path
+							d="m9.06,7.49H.94c-.24,0-.49-.1-.66-.27-.18-.18-.27-.41-.27-.66v-1.56c0-.17.14-.31.31-.31.25,0,.49-.1.66-.27.17-.17.27-.42.27-.66s-.1-.49-.27-.66c-.17-.18-.42-.28-.66-.28-.17,0-.31-.14-.31-.31V.94c0-.25.1-.49.27-.66.18-.18.41-.27.66-.27h8.13c.25,0,.49.1.66.27.18.18.27.41.27.66v1.56c0,.17-.14.31-.31.31h0c-.25,0-.49.1-.66.28-.18.18-.27.41-.27.66s.1.49.27.66c.19.19.46.27.7.27.07,0,.14.03.2.08.07.06.09.14.09.23v1.56c0,.25-.1.49-.27.66-.18.18-.42.28-.66.28ZM.62,5.28v1.28c0,.08.03.16.09.22.06.06.14.09.22.09h8.13c.08,0,.16-.03.22-.09.06-.06.09-.14.09-.22v-1.28c-.31-.06-.58-.21-.8-.42-.29-.29-.46-.69-.46-1.1s.16-.81.46-1.1c.22-.22.5-.37.8-.43V.94c0-.08-.03-.16-.09-.22-.06-.06-.14-.09-.22-.09H.94c-.08,0-.16.03-.22.09-.06.06-.09.14-.09.22v1.28c.3.06.58.21.79.43.29.29.46.69.46,1.1s-.17.81-.46,1.1c-.22.22-.49.36-.79.43Zm9.06-2.78h0,0Zm-2.51,3.75c-.17,0-.31-.14-.31-.31v-.62c0-.17.14-.31.31-.31s.31.14.31.31v.62c0,.17-.14.31-.31.31Zm-4.37,0c-.17,0-.31-.14-.31-.31v-.62c0-.17.14-.31.31-.31s.31.14.31.31v.62c0,.17-.14.31-.31.31Zm4.37-1.87c-.17,0-.31-.14-.31-.31v-.62c0-.17.14-.31.31-.31s.31.14.31.31v.62c0,.17-.14.31-.31.31Zm-4.37,0c-.17,0-.31-.14-.31-.31v-.62c0-.17.14-.31.31-.31s.31.14.31.31v.62c0,.17-.14.31-.31.31Zm4.37-1.87c-.17,0-.31-.14-.31-.31v-.62c0-.17.14-.31.31-.31s.31.14.31.31v.62c0,.17-.14.31-.31.31Zm-4.37,0c-.17,0-.31-.14-.31-.31v-.62c0-.17.14-.31.31-.31s.31.14.31.31v.62c0,.17-.14.31-.31.31Z"
+						/>
+					</svg>
+				</a>
+				<a href="#" class="btn-white" id="transport-btn">TRANSPORT</a>
+			</div>
+		</nav>
+		<!-- HOME -->
+		<section class="home" id="home">
+			<div class="home__hero">
+				<h1 class="hero__title">LIOPRASO</h1>
+				<p class="hero__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem risus, vehicula a felis id, commodo viverra leo. Integer luctus placerat volutpat. Phasellus id ornare tellus. Curabitur a lorem non lorem ultrices venenatis id in nisl. Nullam massa mi, feugiat et ultricies et, vulputate quis massa. In tempus ac lectus porta blandit.</p>
+				<a href="#" class="hero__btn btn btn-white">ABOUT US</a>
+			</div>
+		</section>
+		<!-- SOCIAL -->
+		<section class="social" id="social">
+			<h1 class="social__title">FOLLOW US ON SOCIAL MEDIA</h1>
+			<div class="social__list">
+				<a href="#" class="social__icon-facebook">
+					<svg width="26" height="26" viewBox="0 0 26 26" fill="#f6f6f6">
+						<path d="M25.5 13C25.5 6.1 19.9 0.5 13 0.5C6.1 0.5 0.5 6.1 0.5 13C0.5 19.05 4.8 24.0875 10.5 25.25V16.75H8V13H10.5V9.875C10.5 7.4625 12.4625 5.5 14.875 5.5H18V9.25H15.5C14.8125 9.25 14.25 9.8125 14.25 10.5V13H18V16.75H14.25V25.4375C20.5625 24.8125 25.5 19.4875 25.5 13Z" />
+					</svg>
+				</a>
+				<a href="#" class="social__icon-instagram">
+					<svg width="29" height="29" viewBox="0 0 30 30" fill="#f6f6f6">
+						<path
+							d="M16.2852 2.50123C17.1974 2.49773 18.1096 2.5069 19.0215 2.52873L19.264 2.53748C19.544 2.54748 19.8202 2.55998 20.154 2.57498C21.484 2.63748 22.3915 2.84748 23.1877 3.15623C24.0127 3.47373 24.7077 3.90373 25.4027 4.59873C26.0382 5.22324 26.53 5.97867 26.844 6.81248C27.1527 7.60873 27.3627 8.51748 27.4252 9.84748C27.4402 10.18 27.4527 10.4575 27.4627 10.7375L27.4702 10.98C27.4924 11.8915 27.502 12.8032 27.499 13.715L27.5002 14.6475V16.285C27.5033 17.1972 27.4937 18.1093 27.4715 19.0212L27.464 19.2637C27.454 19.5437 27.4415 19.82 27.4265 20.1537C27.364 21.4837 27.1515 22.3912 26.844 23.1875C26.531 24.0222 26.0391 24.7782 25.4027 25.4025C24.7777 26.0379 24.0219 26.5297 23.1877 26.8437C22.3915 27.1525 21.484 27.3625 20.154 27.425C19.8202 27.44 19.544 27.4525 19.264 27.4625L19.0215 27.47C18.1096 27.4922 17.1974 27.5018 16.2852 27.4987L15.3527 27.5H13.7165C12.8043 27.5031 11.8921 27.4935 10.9802 27.4712L10.7377 27.4637C10.441 27.453 10.1443 27.4405 9.84773 27.4262C8.51773 27.3637 7.61023 27.1512 6.81273 26.8437C5.97859 26.5304 5.22303 26.0385 4.59898 25.4025C3.96279 24.7778 3.47051 24.0219 3.15648 23.1875C2.84773 22.3912 2.63773 21.4837 2.57523 20.1537C2.56131 19.8571 2.54881 19.5605 2.53773 19.2637L2.53148 19.0212C2.50844 18.1093 2.49802 17.1972 2.50023 16.285V13.715C2.49674 12.8032 2.50591 11.8915 2.52773 10.98L2.53648 10.7375C2.54648 10.4575 2.55898 10.18 2.57398 9.84748C2.63648 8.51623 2.84648 7.60998 3.15523 6.81248C3.46945 5.97826 3.96269 5.22304 4.60023 4.59998C5.22385 3.96342 5.97893 3.4707 6.81273 3.15623C7.61023 2.84748 8.51648 2.63748 9.84773 2.57498L10.7377 2.53748L10.9802 2.53123C11.8917 2.5082 12.8035 2.49778 13.7152 2.49998L16.2852 2.50123ZM15.0002 8.75123C14.1721 8.73952 13.3499 8.89251 12.5815 9.20132C11.813 9.51012 11.1135 9.96858 10.5238 10.5501C9.93404 11.1315 9.46573 11.8244 9.14609 12.5884C8.82645 13.3525 8.66185 14.1724 8.66185 15.0006C8.66185 15.8288 8.82645 16.6488 9.14609 17.4128C9.46573 18.1768 9.93404 18.8697 10.5238 19.4512C11.1135 20.0326 11.813 20.4911 12.5815 20.7999C13.3499 21.1087 14.1721 21.2617 15.0002 21.25C16.6578 21.25 18.2475 20.5915 19.4197 19.4194C20.5918 18.2473 21.2502 16.6576 21.2502 15C21.2502 13.3424 20.5918 11.7527 19.4197 10.5806C18.2475 9.40846 16.6578 8.75123 15.0002 8.75123ZM15.0002 11.2512C15.4984 11.2421 15.9933 11.3322 16.4562 11.5165C16.9191 11.7008 17.3407 11.9754 17.6962 12.3244C18.0518 12.6734 18.3342 13.0898 18.527 13.5492C18.7199 14.0085 18.8192 14.5018 18.8193 15C18.8194 15.4982 18.7202 15.9914 18.5275 16.4509C18.3348 16.9103 18.0525 17.3268 17.6971 17.6759C17.3417 18.025 16.9202 18.2998 16.4574 18.4842C15.9946 18.6687 15.4996 18.759 15.0015 18.75C14.0069 18.75 13.0531 18.3549 12.3498 17.6516C11.6466 16.9484 11.2515 15.9945 11.2515 15C11.2515 14.0054 11.6466 13.0516 12.3498 12.3483C13.0531 11.6451 14.0069 11.25 15.0015 11.25L15.0002 11.2512ZM21.5627 6.87623C21.1595 6.89237 20.7781 7.06392 20.4985 7.35495C20.2189 7.64597 20.0627 8.0339 20.0627 8.43748C20.0627 8.84107 20.2189 9.22899 20.4985 9.52002C20.7781 9.81105 21.1595 9.98259 21.5627 9.99873C21.9771 9.99873 22.3746 9.83412 22.6676 9.54109C22.9606 9.24806 23.1252 8.85064 23.1252 8.43623C23.1252 8.02183 22.9606 7.62441 22.6676 7.33138C22.3746 7.03835 21.9771 6.87373 21.5627 6.87373V6.87623Z"
+						/>
+					</svg>
+				</a>
+			</div>
+		</section>
+		<!-- INFO -->
+		<section class="info" id="info">
+			<div class="info_header">
+				<h2 class="header__subtitle">OUR VILLAGE</h2>
+				<h1 class="header__title">LIOPRASO</h1>
+			</div>
+			<div class="info__details">
+				<p class="details__paragraph paragraph-01">Lorem ipsum dolor sit amet consectetur. Urna tortor felis mattis faucibus leo blandit. Consectetur aliquet nec ut enim ac commodo nisl nascetur. Fermentum amet mauris maecenas a at sed et. Senectus hac integer condimentum morbi rutrum tristique.</p>
+				<img src="img/logo.svg" alt="info__logo" class="details__logo" />
+				<p class="details__paragraph paragraph-02">Lorem ipsum dolor sit amet consectetur. Urna tortor felis mattis faucibus leo blandit. Consectetur aliquet nec ut enim ac commodo nisl nascetur. Fermentum amet mauris maecenas a at sed et. Senectus hac integer condimentum morbi rutrum tristique.</p>
+			</div>
+			<img src="img/info_slideshow.jpg" alt="info__slideshow" class="details__slideshow" />
+		</section>
+		<!-- EVENTS -->
+		<section class="events" id="events">
+			<div class="events__divider">
+				<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+					<path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+				</svg>
+			</div>
+			<h1 class="events__title">EVENTS</h1>
+			<div class="events__container">
+				<div class="event event-01">
+					<a href="#" class="event__image">
+						<img src="img/event__image-01.jpg" alt="event__image" />
+					</a>
+					<h1 class="event__title">Event Title</h1>
+					<h2 class="event__date">Date</h2>
+					<p class="event__description">Lorem ipsum dolor sit amet consectetur. Id nisi venenatis id netus tellus a. Cursus aliquam amet sed eu feugiat dignissim viverra.</p>
+					<a href="#" class="event__button btn btn-green">Learn More</a>
+				</div>
+				<div class="event event-02">
+					<a href="#" class="event__image">
+						<img src="img/event__image-02.jpg" alt="event__image" />
+					</a>
+					<h1 class="event__title">Event Title</h1>
+					<h2 class="event__date">Date</h2>
+					<p class="event__description">Lorem ipsum dolor sit amet consectetur. Id nisi venenatis id netus tellus a. Cursus aliquam amet sed eu feugiat dignissim viverra.</p>
+					<a href="#" class="event__button btn btn-green">Learn More</a>
+				</div>
+				<div class="event event-03">
+					<a href="#" class="event__image">
+						<img src="img/event__image-03.jpg" alt="event__image" />
+					</a>
+					<h1 class="event__title">Event Title</h1>
+					<h2 class="event__date">Date</h2>
+					<p class="event__description">Lorem ipsum dolor sit amet consectetur. Id nisi venenatis id netus tellus a. Cursus aliquam amet sed eu feugiat dignissim viverra.</p>
+					<a href="#" class="event__button btn btn-green">Learn More</a>
+				</div>
+			</div>
+		</section>
+		<!-- STATS -->
+		<section class="stats" id="stats">
+			<div class="stat">
+				<img src="img/stat__icon-01.svg" alt="stat__icon" class="stat__icon" />
+				<h1 class="stat__title">STAT TITLE</h1>
+				<p class="stat__description">Lorem ipsum dolor sit amet consectetur.</p>
+			</div>
+			<div class="stat">
+				<img src="img/stat__icon-02.svg" alt="stat__icon" class="stat__icon" />
+				<h1 class="stat__title">STAT TITLE</h1>
+				<p class="stat__description">Lorem ipsum dolor sit amet consectetur.</p>
+			</div>
+			<div class="stat">
+				<img src="img/stat__icon-03.svg" alt="stat__icon" class="stat__icon" />
+				<h1 class="stat__title">STAT TITLE</h1>
+				<p class="stat__description">Lorem ipsum dolor sit amet consectetur.</p>
+			</div>
+		</section>
 	</body>
 </html>
-
-<!-- 
-	  ( )	Created
-	  ) (	By
-	 (   )	Christos
-	[_____] Konstantopoulos
--->
