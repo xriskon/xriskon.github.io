@@ -25,7 +25,7 @@
 }
 
 .hero__title {
-	font-size: 4em;
+	font-size: 3.5em;
 	font-weight: 900;
 }
 
@@ -49,6 +49,7 @@
 
 .social__title {
 	font-size: 1.2em;
+	text-align: center;
 	font-weight: 500;
 }
 
@@ -116,7 +117,7 @@
 
 .events__title {
 	position: relative;
-	font-size: 4em;
+	font-size: 3.5em;
 	text-align: center;
 }
 
@@ -152,6 +153,7 @@
 
 .event__image {
 	aspect-ratio: 19 / 11;
+	width: 100%;
 	border-bottom: 0.5em solid #8aaa66;
 	margin-bottom: 0.7em;
 }
@@ -171,6 +173,12 @@
 
 .event-03 {
 	grid-area: event-03;
+}
+
+.event__button {
+	width: 100%;
+	text-align: center;
+	margin-top: 1em;
 }
 
 /* STATS */
@@ -209,4 +217,74 @@
 .stat__description {
 	color: var(--grey);
 	width: 60%;
+}
+
+/* CONTACT */
+.contact {
+	display: grid;
+	grid-template-rows: 1fr auto;
+	grid-template-areas:
+		"contact__details"
+		"contact__map";
+	gap: 0;
+
+	background-color: var(--dark-grey);
+	color: var(--white);
+	text-align: center;
+	padding: 0;
+}
+
+.contact__details {
+	grid-area: contact__details;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 2em;
+	padding: 5em 10%;
+}
+
+.contact__title {
+	position: relative;
+	font-size: 3.5em;
+}
+
+.contact__title::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	height: 10px;
+	width: 30%;
+	border-radius: 10px;
+	background-color: var(--white);
+	transform: translate(-50%, 100%);
+}
+
+.contact__methods {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.method {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 0.5em;
+}
+
+.method__icon {
+	aspect-ratio: 1;
+	height: 6em;
+}
+
+.contact__map {
+	grid-area: contact__map;
+	aspect-ratio: 1;
+	width: 100%;
+	width: 100%;
+	border: none;
 }
